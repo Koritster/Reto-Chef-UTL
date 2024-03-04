@@ -16,6 +16,7 @@ public class GrabItems : MonoBehaviour
     private Camera cam;
     [SerializeField]
     private GameObject itemSelected, itemGrabbed;
+    private Vector3 hitPosition;
 
     private void Awake()
     {
@@ -28,18 +29,21 @@ public class GrabItems : MonoBehaviour
 
         if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity))
         {
-            if( itemGrabbed == null && hit.transform.GetComponent<ItemToGrab>()) 
+            //Agarrar Boton
+            if(itemGrabbed == null && hit.transform.GetComponent<ItemToGrab>()) 
             {
                 DesactivarBotones();
                 itemSelected = hit.transform.gameObject;
                 grabButton.SetActive(true);
             }
+            //Soltar Boton
             else if(itemGrabbed != null && IsHorizontalCollision(hit))
             {
                 DesactivarBotones();
                 releaseButton.SetActive(true);
                 circlePrefab.SetActive(true);
-                circlePrefab.transform.position = hit.point;
+                hitPosition = hit.point;
+                circlePrefab.transform.position = hitPosition;
             }
             else
             {
@@ -49,9 +53,9 @@ public class GrabItems : MonoBehaviour
         else
         {
             DesactivarBotones();
-            grabButton.SetActive(false);
         }
-        Debug.Log(hit.transform.name);
+
+
     }
 
     private void DesactivarBotones()
@@ -65,13 +69,16 @@ public class GrabItems : MonoBehaviour
     {
         itemGrabbed = itemSelected;
         itemGrabbed.transform.position = holdPosition.position;
+        itemGrabbed.GetComponent<Rigidbody>().useGravity = false;
     }
 
 
 
     public void Soltar()
     {
-
+        itemGrabbed.transform.position = hitPosition + new Vector3(0f, itemGrabbed.GetComponent<Renderer>().bounds.size.y/2, 0f);
+        itemGrabbed.GetComponent<Rigidbody>().useGravity = true;
+        itemGrabbed = null;
     }
 
     bool IsHorizontalCollision(RaycastHit hit)
