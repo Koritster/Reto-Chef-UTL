@@ -29,33 +29,36 @@ public class GrabItems : MonoBehaviour
 
         if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity))
         {
-            //Agarrar Boton
-            if(itemGrabbed == null && hit.transform.GetComponent<ItemToGrab>()) 
-            {
-                DesactivarBotones();
-                itemSelected = hit.transform.gameObject;
-                grabButton.SetActive(true);
-            }
-            //Soltar Boton
-            else if(itemGrabbed != null && IsHorizontalCollision(hit))
-            {
-                DesactivarBotones();
-                releaseButton.SetActive(true);
-                circlePrefab.SetActive(true);
-                hitPosition = hit.point;
-                circlePrefab.transform.position = hitPosition;
-            }
-            else
-            {
-                DesactivarBotones();
-            }
+            HandleRaycast(hit);
         }
         else
         {
             DesactivarBotones();
         }
+    }
 
-
+    private void HandleRaycast(RaycastHit hit)
+    {
+        //Agarrar Boton
+        if (itemGrabbed == null && hit.transform.GetComponent<ItemToGrab>())
+        {
+            DesactivarBotones();
+            itemSelected = hit.transform.gameObject;
+            grabButton.SetActive(true);
+        }
+        //Soltar Boton
+        else if (itemGrabbed != null && IsHorizontalCollision(hit))
+        {
+            DesactivarBotones();
+            releaseButton.SetActive(true);
+            circlePrefab.SetActive(true);
+            hitPosition = hit.point;
+            circlePrefab.transform.position = hitPosition;
+        }
+        else
+        {
+            DesactivarBotones();
+        }
     }
 
     private void DesactivarBotones()
@@ -83,7 +86,8 @@ public class GrabItems : MonoBehaviour
 
     bool IsHorizontalCollision(RaycastHit hit)
     {
-        return hit.normal == Vector3.up;
+        //return hit.normal == Vector3.up;
+        return Vector3.Dot(hit.normal, Vector3.up) > 0.99f;
     }
 
     private void OnDrawGizmosSelected()
