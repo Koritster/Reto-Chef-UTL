@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 4fe091734c0efdb4b906bad3b7ab4bd3
+guid: 3a732c965a8f1184b9e7f8c340c7f864
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uva verde
+    second: {fileID: 2100000, guid: 3f0031b703e604d46b85ff9e23f769f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Uva verde centro
+    second: {fileID: 2100000, guid: 3787fcb834ab2144ca285f066340d5a8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
