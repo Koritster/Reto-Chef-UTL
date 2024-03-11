@@ -10,7 +10,7 @@ public class GrabItems : MonoBehaviour
 
     [Header("Botones de accion")]
     public GameObject grabButton;
-    public GameObject releaseButton;
+    public GameObject releaseButton, cutButton;
 
     //Asignados desde codigo
     private Camera cam;
@@ -45,21 +45,31 @@ public class GrabItems : MonoBehaviour
 
     private void HandleRaycast(RaycastHit hit)
     {
+        itemSelected = hit.transform.gameObject;
+
         //Agarrar Boton
-        if (itemGrabbed == null && hit.transform.GetComponent<ItemToGrab>())
+        if (hit.transform.GetComponent<ItemToGrab>() && itemGrabbed == null)
         {
             DesactivarBotones();
-            itemSelected = hit.transform.gameObject;
             grabButton.SetActive(true);
         }
-        //Soltar Boton
-        else if (itemGrabbed != null && IsHorizontalCollision(hit))
+        else if(itemGrabbed != null)
         {
-            DesactivarBotones();
-            releaseButton.SetActive(true);
-            circlePrefab.SetActive(true);
-            hitPosition = hit.point;
-            circlePrefab.transform.position = hitPosition;
+            //Cortar botón
+            if (itemGrabbed.CompareTag("Cuchillo") && itemSelected.GetComponent<CuttableObject>())
+            {
+                DesactivarBotones();
+                cutButton.SetActive(true);
+            }
+            //Soltar Boton
+            else if (IsHorizontalCollision(hit))
+            {
+                DesactivarBotones();
+                releaseButton.SetActive(true);
+                circlePrefab.SetActive(true);
+                hitPosition = hit.point;
+                circlePrefab.transform.position = hitPosition;
+            }
         }
         else
         {
@@ -72,11 +82,13 @@ public class GrabItems : MonoBehaviour
         grabButton.SetActive(false);
         releaseButton.SetActive(false);
         circlePrefab.SetActive(false);
+        cutButton.SetActive(false);
     }
 
     public void Agarrar()
     {
         itemGrabbed = itemSelected;
+        itemSelected = null;
         itemGrabbed.transform.position = holdPosition.position;
         itemGrabbed.GetComponent<Rigidbody>().useGravity = false;
     }
@@ -88,6 +100,11 @@ public class GrabItems : MonoBehaviour
         itemGrabbed.transform.position = hitPosition + new Vector3(0f, itemGrabbed.GetComponent<Renderer>().bounds.size.y/2, 0f);
         itemGrabbed.GetComponent<Rigidbody>().useGravity = true;
         itemGrabbed = null;
+    }
+
+    public void Cortar()
+    {
+        Debug.Log("Corta");
     }
 
     bool IsHorizontalCollision(RaycastHit hit)
