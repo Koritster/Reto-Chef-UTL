@@ -23,17 +23,23 @@ public class GrabItems : MonoBehaviour
         cam = Camera.main;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         RaycastHit hit;
 
-        if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity))
         {
             HandleRaycast(hit);
         }
         else
         {
             DesactivarBotones();
+        }
+
+        if(itemGrabbed != null)
+        {
+            itemGrabbed.transform.position = holdPosition.position;
+            itemGrabbed.transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
         }
     }
 
