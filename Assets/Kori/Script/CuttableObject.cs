@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class CuttableObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private GameObject modelWithoutCut, modelCutted;
+
+    private void Update()
     {
-        
+        modelCutted.transform.position = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Cortar()
     {
-        
+        modelWithoutCut.SetActive(false);
+        modelCutted.SetActive(true);
     }
 }

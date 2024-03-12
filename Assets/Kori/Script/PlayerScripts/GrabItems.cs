@@ -10,11 +10,10 @@ public class GrabItems : MonoBehaviour
 
     [Header("Botones de accion")]
     public GameObject grabButton;
-    public GameObject releaseButton, cutButton;
+    public GameObject releaseButton, cutButton, addButton;
 
     //Asignados desde codigo
     private Camera cam;
-    [SerializeField]
     private GameObject itemSelected, itemGrabbed;
     private Vector3 hitPosition;
 
@@ -61,6 +60,12 @@ public class GrabItems : MonoBehaviour
                 DesactivarBotones();
                 cutButton.SetActive(true);
             }
+            //Agregar al platillo boton
+            else if (itemGrabbed.GetComponent<Ingrediente>() && itemSelected.GetComponent<Platillo>())
+            {
+                DesactivarBotones();
+                addButton.SetActive(true);
+            }
             //Soltar Boton
             else if (IsHorizontalCollision(hit))
             {
@@ -83,6 +88,7 @@ public class GrabItems : MonoBehaviour
         releaseButton.SetActive(false);
         circlePrefab.SetActive(false);
         cutButton.SetActive(false);
+        addButton.SetActive(false);
     }
 
     public void Agarrar()
@@ -93,8 +99,6 @@ public class GrabItems : MonoBehaviour
         itemGrabbed.GetComponent<Rigidbody>().useGravity = false;
     }
 
-
-
     public void Soltar()
     {
         itemGrabbed.transform.position = hitPosition + new Vector3(0f, itemGrabbed.GetComponent<Renderer>().bounds.size.y/2, 0f);
@@ -104,7 +108,14 @@ public class GrabItems : MonoBehaviour
 
     public void Cortar()
     {
-        Debug.Log("Corta");
+        itemSelected.GetComponent<CuttableObject>().Cortar();
+    }
+
+    public void AñadirIngrediente()
+    {
+        Platillo p = itemSelected.GetComponent<Platillo>();
+        p.ingredientRecieved = itemGrabbed.GetComponent<Ingrediente>();
+        p.Validar();
     }
 
     bool IsHorizontalCollision(RaycastHit hit)
