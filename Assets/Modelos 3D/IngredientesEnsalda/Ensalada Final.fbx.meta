@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: b3b594ddf3bfdd14cbf99bb65c79aa0d
+guid: 620511fa325f36c489716b87cf844000
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metal estufa_
-    second: {fileID: 2100000, guid: 7d55bdf3737b4354caf06faa4c46ad69, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: silver_metal_background_1
-    second: {fileID: 2800000, guid: 767a3159d8343fb4dbedf9933de137a6, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
