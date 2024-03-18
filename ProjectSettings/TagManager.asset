@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Cuchillo
+  - Ingrediente
+  - Bowl
+  - Condimento
   layers:
   - Default
   - TransparentFX

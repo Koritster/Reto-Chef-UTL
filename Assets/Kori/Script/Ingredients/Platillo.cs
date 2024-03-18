@@ -11,9 +11,19 @@ public class Platillo : MonoBehaviour
 
     public Ingrediente ingredientRecieved;
     private int index = 0;
+    [SerializeField] private bool ready;
 
-    public void Validar()
+    public bool Validar()
     {
-        Debug.Log(listIngredients[index] == ingredientRecieved.nombreIngrediente);
+        int i = index;
+        if(listIngredients[index] == ingredientRecieved.nombreIngrediente)
+        {
+            ingredientsModels[index].SetActive(true);
+            index++;
+        }
+
+        ready = index == listIngredients.Count ? true : false;
+
+        return listIngredients[i] == ingredientRecieved.nombreIngrediente;
     }
 }

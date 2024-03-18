@@ -26,7 +26,7 @@ public class GrabItems : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 5f))
         {
             HandleRaycast(hit);
         }
@@ -115,7 +115,23 @@ public class GrabItems : MonoBehaviour
     {
         Platillo p = itemSelected.GetComponent<Platillo>();
         p.ingredientRecieved = itemGrabbed.GetComponent<Ingrediente>();
-        p.Validar();
+        if (p.Validar())
+        {
+            //Si es aceptado, cambia la accion según el tipo de agregado
+            if (itemGrabbed.CompareTag("Ingrediente"))
+            {
+                Destroy(itemGrabbed);
+                itemGrabbed = null;
+            }
+            else if (itemGrabbed.CompareTag("Condimento"))
+            {
+
+            }
+            else if (itemGrabbed.CompareTag("Bowl"))
+            {
+
+            }
+        }
     }
 
     bool IsHorizontalCollision(RaycastHit hit)
@@ -127,6 +143,6 @@ public class GrabItems : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawRay(cam.transform.position, cam.transform.forward * 10f);
+        Gizmos.DrawRay(transform.position, transform.forward * 5f);
     }
 }
