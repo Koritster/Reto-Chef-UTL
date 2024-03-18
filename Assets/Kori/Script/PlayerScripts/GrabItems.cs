@@ -134,6 +134,15 @@ public class GrabItems : MonoBehaviour
         }
     }
 
+    public void Mezclar()
+    {
+        Bowl b = itemSelected.GetComponent<Bowl>();
+        if (b.ready)
+        {
+            b.Batir();
+        }
+    }
+
     bool IsHorizontalCollision(RaycastHit hit)
     {
         //return hit.normal == Vector3.up;
