@@ -10,11 +10,10 @@ public class GrabItems : MonoBehaviour
 
     [Header("Botones de accion")]
     public GameObject grabButton;
-    public GameObject releaseButton;
+    public GameObject releaseButton, cutButton, addButton;
 
     //Asignados desde codigo
     private Camera cam;
-    [SerializeField]
     private GameObject itemSelected, itemGrabbed;
     private Vector3 hitPosition;
 
@@ -27,7 +26,7 @@ public class GrabItems : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Mathf.Infinity))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 5f))
         {
             HandleRaycast(hit);
         }
@@ -45,21 +44,37 @@ public class GrabItems : MonoBehaviour
 
     private void HandleRaycast(RaycastHit hit)
     {
+        itemSelected = hit.transform.gameObject;
+
         //Agarrar Boton
-        if (itemGrabbed == null && hit.transform.GetComponent<ItemToGrab>())
+        if (hit.transform.GetComponent<ItemToGrab>() && itemGrabbed == null)
         {
             DesactivarBotones();
-            itemSelected = hit.transform.gameObject;
             grabButton.SetActive(true);
         }
-        //Soltar Boton
-        else if (itemGrabbed != null && IsHorizontalCollision(hit))
+        else if(itemGrabbed != null)
         {
-            DesactivarBotones();
-            releaseButton.SetActive(true);
-            circlePrefab.SetActive(true);
-            hitPosition = hit.point;
-            circlePrefab.transform.position = hitPosition;
+            //Cortar botón
+            if (itemGrabbed.CompareTag("Cuchillo") && itemSelected.GetComponent<CuttableObject>())
+            {
+                DesactivarBotones();
+                cutButton.SetActive(true);
+            }
+            //Agregar al platillo boton
+            else if (itemGrabbed.GetComponent<Ingrediente>() && itemSelected.GetComponent<Platillo>())
+            {
+                DesactivarBotones();
+                addButton.SetActive(true);
+            }
+            //Soltar Boton
+            else if (IsHorizontalCollision(hit))
+            {
+                DesactivarBotones();
+                releaseButton.SetActive(true);
+                circlePrefab.SetActive(true);
+                hitPosition = hit.point;
+                circlePrefab.transform.position = hitPosition;
+            }
         }
         else
         {
@@ -72,22 +87,51 @@ public class GrabItems : MonoBehaviour
         grabButton.SetActive(false);
         releaseButton.SetActive(false);
         circlePrefab.SetActive(false);
+        cutButton.SetActive(false);
+        addButton.SetActive(false);
     }
 
     public void Agarrar()
     {
         itemGrabbed = itemSelected;
+        itemSelected = null;
         itemGrabbed.transform.position = holdPosition.position;
         itemGrabbed.GetComponent<Rigidbody>().useGravity = false;
     }
-
-
 
     public void Soltar()
     {
         itemGrabbed.transform.position = hitPosition + new Vector3(0f, itemGrabbed.GetComponent<Renderer>().bounds.size.y/2, 0f);
         itemGrabbed.GetComponent<Rigidbody>().useGravity = true;
         itemGrabbed = null;
+    }
+
+    public void Cortar()
+    {
+        itemSelected.GetComponent<CuttableObject>().Cortar();
+    }
+
+    public void AñadirIngrediente()
+    {
+        Platillo p = itemSelected.GetComponent<Platillo>();
+        p.ingredientRecieved = itemGrabbed.GetComponent<Ingrediente>();
+        if (p.Validar())
+        {
+            //Si es aceptado, cambia la accion según el tipo de agregado
+            if (itemGrabbed.CompareTag("Ingrediente"))
+            {
+                Destroy(itemGrabbed);
+                itemGrabbed = null;
+            }
+            else if (itemGrabbed.CompareTag("Condimento"))
+            {
+
+            }
+            else if (itemGrabbed.CompareTag("Bowl"))
+            {
+
+            }
+        }
     }
 
     bool IsHorizontalCollision(RaycastHit hit)
@@ -99,6 +143,6 @@ public class GrabItems : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawRay(cam.transform.position, cam.transform.forward * 10f);
+        Gizmos.DrawRay(transform.position, transform.forward * 5f);
     }
 }
