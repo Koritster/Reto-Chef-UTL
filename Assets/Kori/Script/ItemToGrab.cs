@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class ItemToGrab : MonoBehaviour
 {
+    private Quaternion initialRotate;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        initialRotate = transform.rotation;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CorrectRotation()
     {
-        
+        transform.rotation = initialRotate;
     }
 }
