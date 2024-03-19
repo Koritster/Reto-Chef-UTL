@@ -16,6 +16,7 @@ public class GrabItems : MonoBehaviour
     private Camera cam;
     private GameObject itemSelected, itemGrabbed;
     private Vector3 hitPosition;
+    [SerializeField] private float maxDistance;
 
     private void Awake()
     {
@@ -26,7 +27,7 @@ public class GrabItems : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 5f))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, maxDistance))
         {
             HandleRaycast(hit);
         }
@@ -152,6 +153,6 @@ public class GrabItems : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawRay(transform.position, transform.forward * 5f);
+        Gizmos.DrawRay(transform.position, transform.forward * maxDistance);
     }
 }

@@ -1,0 +1,368 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4416625626483850319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4921750374639900785}
+  m_Layer: 0
+  m_Name: Manzana Roja
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4921750374639900785
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416625626483850319}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.024, y: 0.4748, z: -0.5038}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3655059152235208357}
+  - {fileID: 1202426085086810599}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1667837480780314124
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4921750374639900785}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      propertyPath: m_Name
+      value: ManzanaRojaCortada
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      propertyPath: m_TagString
+      value: Ingrediente
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 235736521366063357}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 494848703677187664}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2260802859663000718}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 845561113623744827}
+  m_SourcePrefab: {fileID: 100100000, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+--- !u!4 &1202426085086810599 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+  m_PrefabInstance: {fileID: 1667837480780314124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2009784710711151453 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4358cf20481aa2945857667ab91e45bb, type: 3}
+  m_PrefabInstance: {fileID: 1667837480780314124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &235736521366063357
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009784710711151453}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011110312, y: 0.00095928466, z: 0.00021567401}
+  m_Center: {x: -0.00008231192, y: 0.00003156093, z: 0.00002013534}
+--- !u!54 &494848703677187664
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009784710711151453}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2260802859663000718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009784710711151453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca51048c578d1c34f8e784375f7faa36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &845561113623744827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009784710711151453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 451b0edd1291d3c4b89a5ba43e84b28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombreIngrediente: Manzana roja cortada
+--- !u!1001 &3833646931003341134
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4921750374639900785}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a9317b61193a968438b81941d433acea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9317b61193a968438b81941d433acea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9317b61193a968438b81941d433acea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9317b61193a968438b81941d433acea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9317b61193a968438b81941d433acea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9317b61193a968438b81941d433acea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9317b61193a968438b81941d433acea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9317b61193a968438b81941d433acea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9317b61193a968438b81941d433acea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a9317b61193a968438b81941d433acea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a9317b61193a968438b81941d433acea, type: 3}
+      propertyPath: m_Name
+      value: ManzanaRoja
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a9317b61193a968438b81941d433acea, type: 3}
+      propertyPath: m_TagString
+      value: Ingrediente
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a9317b61193a968438b81941d433acea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4984439864560892791}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a9317b61193a968438b81941d433acea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3478669953443032405}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a9317b61193a968438b81941d433acea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8506709982209266461}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a9317b61193a968438b81941d433acea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 947493654837713345}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a9317b61193a968438b81941d433acea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1882608819750085725}
+  m_SourcePrefab: {fileID: 100100000, guid: a9317b61193a968438b81941d433acea, type: 3}
+--- !u!4 &3655059152235208357 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a9317b61193a968438b81941d433acea, type: 3}
+  m_PrefabInstance: {fileID: 3833646931003341134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4175593608897184799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a9317b61193a968438b81941d433acea, type: 3}
+  m_PrefabInstance: {fileID: 3833646931003341134}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4984439864560892791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175593608897184799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8c93a7a7582014e980e12fcbc64858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelWithoutCut: {fileID: 4175593608897184799}
+  modelCutted: {fileID: 2009784710711151453}
+--- !u!65 &3478669953443032405
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175593608897184799}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.00075043575, y: 0.0007890533, z: 0.00076207385}
+  m_Center: {x: -0.000077689954, y: 0.000031718002, z: -0.0002157032}
+--- !u!54 &8506709982209266461
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175593608897184799}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &947493654837713345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175593608897184799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca51048c578d1c34f8e784375f7faa36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1882608819750085725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175593608897184799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 451b0edd1291d3c4b89a5ba43e84b28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombreIngrediente: Manzana roja
