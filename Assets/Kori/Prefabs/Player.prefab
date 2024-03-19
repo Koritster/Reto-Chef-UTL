@@ -485,7 +485,7 @@ Transform:
   m_GameObject: {fileID: 1504764167724321390}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.35, z: 2}
+  m_LocalPosition: {x: 1, y: 0.35, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -744,6 +744,7 @@ GameObject:
   - component: {fileID: 575333735599978276}
   - component: {fileID: 8939552032350459464}
   - component: {fileID: 4128675075965601828}
+  - component: {fileID: 5871379217884901601}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -760,7 +761,7 @@ Transform:
   m_GameObject: {fileID: 3590763427163774545}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.389, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -895,6 +896,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _FTF: {fileID: 6460209358389230957}
   _cL: {fileID: 5227528201581742555}
+--- !u!54 &5871379217884901601
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3590763427163774545}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &3611722973867928864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1336,7 +1364,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.456881, y: -1.563, z: -4.31}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3077982817573991347}
@@ -1493,6 +1521,7 @@ MonoBehaviour:
   releaseButton: {fileID: 6951510832955629986}
   cutButton: {fileID: 2272240846501505886}
   addButton: {fileID: 6762638046532787450}
+  maxDistance: 5
 --- !u!114 &5227528201581742555
 MonoBehaviour:
   m_ObjectHideFlags: 0

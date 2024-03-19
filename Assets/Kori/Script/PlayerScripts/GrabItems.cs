@@ -25,15 +25,12 @@ public class GrabItems : MonoBehaviour
 
     private void Update()
     {
+
         RaycastHit hit;
 
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, maxDistance))
         {
             HandleRaycast(hit);
-        }
-        else
-        {
-            DesactivarBotones();
         }
 
         if(itemGrabbed != null)
@@ -43,45 +40,75 @@ public class GrabItems : MonoBehaviour
         }
     }
 
+    private bool isExitingCollision = false;
+    private bool isRaycastColliding = false;
+
     private void HandleRaycast(RaycastHit hit)
     {
         itemSelected = hit.transform.gameObject;
 
-        //Agarrar Boton
-        if (hit.transform.GetComponent<ItemToGrab>() && itemGrabbed == null)
+        // Agarrar Boton
+        if (hit.transform.GetComponent<ItemToGrab>() && itemGrabbed == null && !isRaycastColliding)
         {
+            isRaycastColliding = true;
             DesactivarBotones();
             grabButton.SetActive(true);
         }
-        else if(itemGrabbed != null)
+        else if (itemGrabbed != null)
         {
-            //Cortar botón
-            if (itemGrabbed.CompareTag("Cuchillo") && itemSelected.GetComponent<CuttableObject>())
+            if (!isRaycastColliding)
             {
-                DesactivarBotones();
-                cutButton.SetActive(true);
+                isRaycastColliding = true;
+
+                // Cortar botón
+                if (itemGrabbed.CompareTag("Cuchillo") && itemSelected.GetComponent<CuttableObject>())
+                {
+                    DesactivarBotones();
+                    cutButton.SetActive(true);
+                }
+                // Agregar al platillo boton
+                else if (itemGrabbed.GetComponent<Ingrediente>() && itemSelected.GetComponent<Platillo>())
+                {
+                    DesactivarBotones();
+                    addButton.SetActive(true);
+                }
+                // Soltar Boton
+                else if (IsHorizontalCollision(hit))
+                {
+                    DesactivarBotones();
+                    releaseButton.SetActive(true);
+                    circlePrefab.SetActive(true);
+                }
             }
-            //Agregar al platillo boton
-            else if (itemGrabbed.GetComponent<Ingrediente>() && itemSelected.GetComponent<Platillo>())
+            if (IsHorizontalCollision(hit))
             {
-                DesactivarBotones();
-                addButton.SetActive(true);
+                circlePrefab.transform.position = hit.point;
             }
-            //Soltar Boton
-            else if (IsHorizontalCollision(hit))
-            {
-                DesactivarBotones();
-                releaseButton.SetActive(true);
-                circlePrefab.SetActive(true);
-                hitPosition = hit.point;
-                circlePrefab.transform.position = hitPosition;
-            }
+        }
+        else if (isRaycastColliding)
+        {
+
         }
         else
         {
             DesactivarBotones();
         }
+
+        // Llamar a la coroutine solo si estamos en una colisión y no está saliendo ya
+        if (isRaycastColliding && !isExitingCollision)
+        {
+            isExitingCollision = true;
+            StartCoroutine(ExitCollisionAfterDelay(0.1f));
+        }
     }
+
+    IEnumerator ExitCollisionAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        isRaycastColliding = false;
+        isExitingCollision = false;
+    }
+
 
     private void DesactivarBotones()
     {
