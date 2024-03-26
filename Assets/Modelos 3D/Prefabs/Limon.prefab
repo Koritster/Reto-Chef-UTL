@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5081925723311545277}
   m_Layer: 0
   m_Name: Limon
-  m_TagString: Ingrediente
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,6 +114,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 165f50335ece639419fb6f13125505ea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1963676819606086046}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 165f50335ece639419fb6f13125505ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5997037864216397058}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 165f50335ece639419fb6f13125505ea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5049267020249078492}
   m_SourcePrefab: {fileID: 100100000, guid: 165f50335ece639419fb6f13125505ea, type: 3}
 --- !u!1 &7214811714543390813 stripped
 GameObject:
@@ -180,6 +186,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca51048c578d1c34f8e784375f7faa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5997037864216397058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214811714543390813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea8c93a7a7582014e980e12fcbc64858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modelWithoutCut: {fileID: 7214811714543390813}
+  modelCutted: {fileID: 8213625392715311175}
+--- !u!114 &5049267020249078492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214811714543390813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 451b0edd1291d3c4b89a5ba43e84b28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombreIngrediente: Limon
 --- !u!4 &8028785276977400551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 165f50335ece639419fb6f13125505ea, type: 3}
@@ -270,6 +303,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7305ab35753b32e429bc7464c53a2805, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8342780757882270914}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7305ab35753b32e429bc7464c53a2805, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4243952867872842854}
   m_SourcePrefab: {fileID: 100100000, guid: 7305ab35753b32e429bc7464c53a2805, type: 3}
 --- !u!1 &8213625392715311175 stripped
 GameObject:
@@ -336,6 +372,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca51048c578d1c34f8e784375f7faa36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4243952867872842854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8213625392715311175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 451b0edd1291d3c4b89a5ba43e84b28b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nombreIngrediente: Limon cortado
 --- !u!4 &8842668791912264445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7305ab35753b32e429bc7464c53a2805, type: 3}

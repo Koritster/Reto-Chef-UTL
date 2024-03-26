@@ -18,13 +18,27 @@ public class Bowl : MonoBehaviour
         ingredientBowl = GetComponent<Ingrediente>();
     }
 
+    private void Update()
+    {
+        foreach(GameObject i in ingredientsModels)
+        {
+            i.transform.position = transform.position;
+        }
+    }
+
     public bool Validar()
     {
         int i = index;
+        Debug.Log(index);
         if (listIngredients[index] == ingredientRecieved.nombreIngrediente)
         {
             ingredientsModels[index].SetActive(true);
             index++;
+        }
+
+        if (ingredientRecieved.gameObject.GetComponent<Bowl>())
+        {
+            ingredientRecieved.gameObject.GetComponent<Bowl>().Vaciar();
         }
 
         ready = index == listIngredients.Count ? true : false;
@@ -34,7 +48,18 @@ public class Bowl : MonoBehaviour
 
     public void Batir()
     {
-        ingredientBowl.name = finalBowlIngredientName;
+        ingredientBowl.nombreIngrediente = finalBowlIngredientName;
         ingredientsModels[index].SetActive(true);
+    }
+
+    public void Vaciar()
+    {
+        index = 0;
+        foreach(GameObject i in ingredientsModels)
+        {
+            i.SetActive(false);
+        }
+        ready = false;
+        ingredientBowl.nombreIngrediente = "Bowl";
     }
 }

@@ -13,6 +13,14 @@ public class Platillo : MonoBehaviour
     
     private int index = 0;
 
+    private void Update()
+    {
+        foreach (GameObject i in ingredientsModels)
+        {
+            i.transform.position = transform.position;
+        }
+    }
+
     public bool Validar()
     {
         int i = index;
@@ -20,6 +28,11 @@ public class Platillo : MonoBehaviour
         {
             ingredientsModels[index].SetActive(true);
             index++;
+        }
+
+        if (ingredientRecieved.gameObject.GetComponent<Bowl>())
+        {
+            ingredientRecieved.gameObject.GetComponent<Bowl>().Vaciar();
         }
 
         ready = index == listIngredients.Count ? true : false;

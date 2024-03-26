@@ -10,12 +10,14 @@ public class GrabItems : MonoBehaviour
 
     [Header("Botones de accion")]
     public GameObject grabButton;
-    public GameObject releaseButton, cutButton, addButton;
+    public GameObject releaseButton, cutButton, addButton, mixButton;
 
     //Asignados desde codigo
     private Camera cam;
-    private GameObject itemSelected, itemGrabbed;
+    [SerializeField] private GameObject itemSelected, itemGrabbed;
     private Vector3 hitPosition;
+    private float maxDistance = 5;
+
 
     private void Awake()
     {
@@ -26,7 +28,7 @@ public class GrabItems : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 5f))
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, maxDistance))
         {
             HandleRaycast(hit);
         }
@@ -38,7 +40,6 @@ public class GrabItems : MonoBehaviour
         if(itemGrabbed != null)
         {
             itemGrabbed.transform.position = holdPosition.position;
-            itemGrabbed.transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
         }
     }
 
@@ -60,8 +61,17 @@ public class GrabItems : MonoBehaviour
                 DesactivarBotones();
                 cutButton.SetActive(true);
             }
+            //Mezclar
+            else if (itemGrabbed.CompareTag("Batidor") && itemSelected.GetComponent<Bowl>())
+            {
+                if (itemSelected.GetComponent<Bowl>().ready)
+                {
+                    DesactivarBotones();
+                    mixButton.SetActive(true);
+                }
+            }
             //Agregar al platillo boton
-            else if (itemGrabbed.GetComponent<Ingrediente>() && itemSelected.GetComponent<Platillo>())
+            else if (itemGrabbed.GetComponent<Ingrediente>() && (itemSelected.GetComponent<Platillo>() || itemSelected.GetComponent<Bowl>()))
             {
                 DesactivarBotones();
                 addButton.SetActive(true);
@@ -89,6 +99,7 @@ public class GrabItems : MonoBehaviour
         circlePrefab.SetActive(false);
         cutButton.SetActive(false);
         addButton.SetActive(false);
+        mixButton.SetActive(false);
     }
 
     public void Agarrar()
@@ -97,11 +108,13 @@ public class GrabItems : MonoBehaviour
         itemSelected = null;
         itemGrabbed.transform.position = holdPosition.position;
         itemGrabbed.GetComponent<Rigidbody>().useGravity = false;
+        itemGrabbed.GetComponent<ItemToGrab>().CorrectRotation();
     }
 
     public void Soltar()
     {
         itemGrabbed.transform.position = hitPosition + new Vector3(0f, itemGrabbed.GetComponent<Renderer>().bounds.size.y/2, 0f);
+        itemGrabbed.GetComponent<ItemToGrab>().CorrectRotation();
         itemGrabbed.GetComponent<Rigidbody>().useGravity = true;
         itemGrabbed = null;
     }
@@ -113,23 +126,51 @@ public class GrabItems : MonoBehaviour
 
     public void AñadirIngrediente()
     {
-        Platillo p = itemSelected.GetComponent<Platillo>();
-        p.ingredientRecieved = itemGrabbed.GetComponent<Ingrediente>();
-        if (p.Validar())
+        Debug.Log("Añadiendo");
+        if (itemSelected.GetComponent<Platillo>()) 
         {
-            //Si es aceptado, cambia la accion según el tipo de agregado
-            if (itemGrabbed.CompareTag("Ingrediente"))
+            Platillo p = itemSelected.GetComponent<Platillo>();
+            p.ingredientRecieved = itemGrabbed.GetComponent<Ingrediente>();
+            if (p.Validar())
             {
-                Destroy(itemGrabbed);
-                itemGrabbed = null;
-            }
-            else if (itemGrabbed.CompareTag("Condimento"))
-            {
+            Debug.Log("A platillo");
+                //Si es aceptado, cambia la accion según el tipo de agregado
+                if (itemGrabbed.CompareTag("Ingrediente"))
+                {
+                    Destroy(itemGrabbed);
+                    itemGrabbed = null;
+                }
+                else if (itemGrabbed.CompareTag("Condimento"))
+                {
 
-            }
-            else if (itemGrabbed.CompareTag("Bowl"))
-            {
+                }
+                else if (itemGrabbed.CompareTag("Bowl"))
+                {
 
+                }
+            }
+        }
+        else if (itemSelected.GetComponent<Bowl>())
+        {
+            Bowl p = itemSelected.GetComponent<Bowl>();
+            p.ingredientRecieved = itemGrabbed.GetComponent<Ingrediente>();
+            if (p.Validar())
+            {
+            Debug.Log("A bowl");
+                //Si es aceptado, cambia la accion según el tipo de agregado
+                if (itemGrabbed.CompareTag("Ingrediente"))
+                {
+                    Destroy(itemGrabbed);
+                    itemGrabbed = null;
+                }
+                else if (itemGrabbed.CompareTag("Condimento"))
+                {
+
+                }
+                else if (itemGrabbed.CompareTag("Bowl"))
+                {
+
+                }
             }
         }
     }
@@ -152,6 +193,6 @@ public class GrabItems : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawRay(transform.position, transform.forward * 5f);
+        Gizmos.DrawRay(transform.position, transform.forward * maxDistance);
     }
 }
