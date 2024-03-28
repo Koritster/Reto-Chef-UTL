@@ -13,13 +13,6 @@ public class Platillo : MonoBehaviour
     
     private int index = 0;
 
-    private void Update()
-    {
-        foreach (GameObject i in ingredientsModels)
-        {
-            i.transform.position = transform.position;
-        }
-    }
 
     public bool Validar()
     {

@@ -18,14 +18,6 @@ public class Bowl : MonoBehaviour
         ingredientBowl = GetComponent<Ingrediente>();
     }
 
-    private void Update()
-    {
-        foreach(GameObject i in ingredientsModels)
-        {
-            i.transform.position = transform.position;
-        }
-    }
-
     public bool Validar()
     {
         int i = index;
