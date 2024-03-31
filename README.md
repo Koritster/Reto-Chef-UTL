@@ -40,4 +40,34 @@ Antes de fusionar cualquiera de las ramas con la rama principal es importante co
   <th>Cambios principales</th>
   <th>Bugs / errores encontrados</th>
  </tr>
+ <tr>
+  <td>Alpha 0.0.1</td>
+  <td><ul>
+   <li>Touch controllers</li>
+   <li>Player Movement / Camera movement</li>
+   <li>Grab items</li>
+   <li>Drop items</li>
+  </ul></td>
+  <td></td>
+ </tr>
+ <tr>
+  <td>Alpha 0.0.2</td>
+  <td><ul>
+   <li>Bowls added</li>
+   <li>Platillo complete - Ensalada Waldorf</li>
+   <li>Mixing mechanic</li>
+   <li>Player prefab changed</li>
+   <li>Scenario added</li>
+  </ul></td>
+  <td></td>
+ </tr>
+ <tr>
+  <td>Alpha 0.0.3</td>
+  <td><ul>
+   <li>Bowls models fixed</li>
+   <li>Icons added</li>
+   <li>Files moved</li>
+  </ul></td>
+  <td></td>
+ </tr>
 </table>

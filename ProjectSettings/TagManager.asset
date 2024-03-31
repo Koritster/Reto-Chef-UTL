@@ -9,6 +9,7 @@ TagManager:
   - Bowl
   - Condimento
   - Batidor
+  - Page
   layers:
   - Default
   - TransparentFX
