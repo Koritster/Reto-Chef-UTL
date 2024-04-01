@@ -70,4 +70,13 @@ Antes de fusionar cualquiera de las ramas con la rama principal es importante co
   </ul></td>
   <td></td>
  </tr>
+ <tr>
+  <td>Alpha 0.0.31</td>
+  <td><ul>
+   <li>Lights changed</li>
+   <li>Textures changed</li>
+   <li>Ingredients reorganized</li>
+  </ul></td>
+  <td></td>
+ </tr>
 </table>
