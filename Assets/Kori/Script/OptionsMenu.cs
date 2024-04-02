@@ -18,6 +18,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void OpenOptionsMenu()
     {
+        Time.timeScale = 0f;
+
         cp_Buttons.SetActive(false);
         cp_Joysticks.SetActive(false);
         c_Pause.SetActive(true);
@@ -26,6 +28,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void CloseOptionsMenu()
     {
+        Time.timeScale = 1f;
+
         p_Pause.SetActive(false);
         c_Pause.SetActive(false);
         cp_Buttons.SetActive(true);
