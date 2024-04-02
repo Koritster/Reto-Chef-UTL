@@ -79,4 +79,12 @@ Antes de fusionar cualquiera de las ramas con la rama principal es importante co
   </ul></td>
   <td></td>
  </tr>
+ <tr>
+  <td>Alpha 0.0.31</td>
+  <td><ul>
+   <li>Book scripts added</li>
+   <li>Pause menu</li>
+  </ul></td>
+  <td></td>
+ </tr>
 </table>
