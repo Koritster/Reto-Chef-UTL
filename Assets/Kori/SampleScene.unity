@@ -970,7 +970,6 @@ MonoBehaviour:
   c_Pause: {fileID: 0}
   p_Pause: {fileID: 0}
   p_Book: {fileID: 0}
-  s_RecipeBook: {fileID: 0}
 --- !u!1 &541294826
 GameObject:
   m_ObjectHideFlags: 0
@@ -3524,14 +3523,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 525216848}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: RestartScene
-        m_Mode: 1
+        m_MethodName: ChangeSceneByName
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Modelado
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2063312647
