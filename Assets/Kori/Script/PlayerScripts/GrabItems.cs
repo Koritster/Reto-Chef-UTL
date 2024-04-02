@@ -126,7 +126,6 @@ public class GrabItems : MonoBehaviour
 
     public void AñadirIngrediente()
     {
-        Debug.Log("Añadiendo");
         if (itemSelected.GetComponent<Platillo>()) 
         {
             Platillo p = itemSelected.GetComponent<Platillo>();
@@ -156,7 +155,6 @@ public class GrabItems : MonoBehaviour
             p.ingredientRecieved = itemGrabbed.GetComponent<Ingrediente>();
             if (p.Validar())
             {
-            Debug.Log("A bowl");
                 //Si es aceptado, cambia la accion según el tipo de agregado
                 if (itemGrabbed.CompareTag("Ingrediente"))
                 {
@@ -181,6 +179,7 @@ public class GrabItems : MonoBehaviour
         if (b.ready)
         {
             b.Batir();
+            b.iconReady.SetActive(true);
         }
     }
 

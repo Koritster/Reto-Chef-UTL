@@ -6,6 +6,7 @@ public class OptionsMenu : MonoBehaviour
 {
     [SerializeField] private GameObject cp_Joysticks, cp_Buttons, c_Pause, p_Pause, p_Book;
     private RecipeBook s_RecipeBook;
+    private PlayerMovement p_stop;
 
     private void Awake()
     {
@@ -14,11 +15,12 @@ public class OptionsMenu : MonoBehaviour
         c_Pause.SetActive(false);
 
         s_RecipeBook = GetComponent<RecipeBook>();
+        p_stop = GameObject.FindGameObjectWithTag("PlayerMovement").GetComponent<PlayerMovement>();
     }
 
     public void OpenOptionsMenu()
     {
-        Time.timeScale = 0f;
+        p_stop.Detener();
 
         cp_Buttons.SetActive(false);
         cp_Joysticks.SetActive(false);
@@ -28,8 +30,6 @@ public class OptionsMenu : MonoBehaviour
 
     public void CloseOptionsMenu()
     {
-        Time.timeScale = 1f;
-
         p_Pause.SetActive(false);
         c_Pause.SetActive(false);
         cp_Buttons.SetActive(true);
