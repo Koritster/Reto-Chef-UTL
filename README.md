@@ -80,7 +80,7 @@ Antes de fusionar cualquiera de las ramas con la rama principal es importante co
   <td></td>
  </tr>
  <tr>
-  <td>Alpha 0.0.31</td>
+  <td>Alpha 0.0.32</td>
   <td><ul>
    <li>Book scripts added</li>
    <li>Pause menu</li>
