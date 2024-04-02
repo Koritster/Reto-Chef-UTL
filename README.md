@@ -70,4 +70,42 @@ Antes de fusionar cualquiera de las ramas con la rama principal es importante co
   </ul></td>
   <td></td>
  </tr>
+ <tr>
+  <td>Alpha 0.0.31</td>
+  <td><ul>
+   <li>Lights changed</li>
+   <li>Textures changed</li>
+   <li>Ingredients reorganized</li>
+  </ul></td>
+  <td></td>
+ </tr>
+ <tr>
+  <td>Alpha 0.0.32</td>
+  <td><ul>
+   <li>Book scripts added</li>
+   <li>Pause menu</li>
+  </ul></td>
+  <td><ul>
+   <li>Close book button don't work</li>
+   <li>Don't stop the game</li>
+  </ul></td>
+ </tr>
+ <tr>
+  <td>Alpha 0.0.32 v2</td>
+  <td><ul>
+   <li>Close book button fixed</li>
+   <li>Pause with Time.timeScale</li>
+  </ul></td>
+  <td><ul>
+   <li>Restart button stop the game</li>
+  </ul></td>
+ </tr>
+ <tr>
+  <td>Alpha 0.0.32 v3</td>
+  <td><ul>
+   <li>Restart button fixed</li>
+  </ul></td>
+  <td>
+  </td>
+ </tr>
 </table>
