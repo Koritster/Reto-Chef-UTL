@@ -26,6 +26,10 @@ public class RecipeBook : MonoBehaviour
         }
 
         ComprobarInicioFin();
+    }
+
+    private void Start()
+    {
         AbrirPagina(index);
     }
 
@@ -58,6 +62,7 @@ public class RecipeBook : MonoBehaviour
         for (int i = 0; i < p.transform.childCount; i++)
         {
             p.transform.GetChild(i).GetComponentInChildren<Animator>(true).Play("Abrir");
+            Debug.Log("Se abrió la pagina " + index);
         }
     }
 

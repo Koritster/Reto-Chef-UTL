@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listIngredients:
-  - Bowl ingredientes Ensalada Waldorf terminado
+  - Bowl ingredientes
   ingredientsModels:
   - {fileID: 4476641568296091585}
   ingredientRecieved: {fileID: 0}
