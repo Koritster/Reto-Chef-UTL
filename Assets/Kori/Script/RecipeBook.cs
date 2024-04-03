@@ -18,19 +18,16 @@ public class RecipeBook : MonoBehaviour
         
         pagesPanels = GameObject.FindGameObjectsWithTag("Page");
         pagesPanels = pagesPanels.OrderBy(x => x.name).ToArray();
-        
+
+        AbrirPagina(index);
+
         //Cerrar todo al inicio sin animación
-        foreach(var page in pagesPanels)
+        foreach (var page in pagesPanels)
         {
             page.SetActive(false);
         }
 
         ComprobarInicioFin();
-    }
-
-    private void Start()
-    {
-        AbrirPagina(index);
     }
 
     private void CerrarPaginas()
@@ -61,8 +58,8 @@ public class RecipeBook : MonoBehaviour
     {
         for (int i = 0; i < p.transform.childCount; i++)
         {
+            Debug.Log(p.transform.GetChild(i).name);
             p.transform.GetChild(i).GetComponentInChildren<Animator>(true).Play("Abrir");
-            Debug.Log("Se abrió la pagina " + index);
         }
     }
 
@@ -90,6 +87,17 @@ public class RecipeBook : MonoBehaviour
         pagesPanels[index].SetActive(true);
 
         AnimacionabrirHijos(pagesPanels[index]);
+        ComprobarInicioFin();
+    }
+    
+    public void AbrirPaginaSinAnimacion(int pageNo)
+    {
+        index = pageNo;
+
+        CerrarPaginas();
+
+        pagesPanels[index].SetActive(true);
+        
         ComprobarInicioFin();
     }
 

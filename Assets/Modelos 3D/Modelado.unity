@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43703407, g: 0.48472828, b: 0.56499153, a: 1}
+  m_IndirectSpecularColor: {r: 0.43703374, g: 0.4847278, b: 0.56499094, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -293,10 +293,10 @@ RectTransform:
   - {fileID: 2038466144}
   m_Father: {fileID: 1530393229}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.00875, y: 0.004712329}
-  m_AnchorMax: {x: 0.00875, y: 0.004712329}
-  m_AnchoredPosition: {x: 54.399994, y: 50.222992}
-  m_SizeDelta: {x: 122.8, y: 109.63}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 61.5, y: 52.5}
+  m_SizeDelta: {x: 122.79999, y: 109.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &191993877
 MonoBehaviour:
@@ -3671,6 +3671,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2134236814}
+        m_TargetAssemblyTypeName: RecipeBook, Assembly-CSharp
+        m_MethodName: AbrirPaginaSinAnimacion
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1717403446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3939,6 +3951,7 @@ GameObject:
   - component: {fileID: 1796597256}
   - component: {fileID: 1796597258}
   - component: {fileID: 1796597257}
+  - component: {fileID: 1796597259}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -4003,6 +4016,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796597255}
   m_CullTransparentMesh: 1
+--- !u!95 &1796597259
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796597255}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c07c4d9bd504a145a0414897dce260b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1862233074 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3867498627553537287, guid: 7dffc7ebaf69b8340a41253cb5095786, type: 3}
@@ -4619,9 +4653,9 @@ RectTransform:
   m_Father: {fileID: 1530393229}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0.004712329}
-  m_AnchoredPosition: {x: -67.1488, y: 53.272995}
-  m_SizeDelta: {x: 129.4432, y: 103.53}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -65.5, y: 50.5}
+  m_SizeDelta: {x: 129.4432, y: 105.53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1954186245
 MonoBehaviour:
