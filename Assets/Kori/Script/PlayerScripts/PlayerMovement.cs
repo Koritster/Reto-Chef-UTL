@@ -20,4 +20,9 @@ public class PlayerMovement : MonoBehaviour
         Vector3 Move = transform.right * joystick.Horizontal + transform.forward * joystick.Vertical;
         charController.Move(Move * SpeedMove * Time.deltaTime);
     }
+
+    public void Detener()
+    {
+        charController.Move(Vector3.zero);
+    }
 }
