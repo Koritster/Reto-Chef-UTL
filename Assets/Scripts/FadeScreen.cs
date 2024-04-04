@@ -34,6 +34,7 @@ public class FadeScreen : MonoBehaviour
     public void Fade(float alphaIn, float alphaOut)
     {
         StartCoroutine(FadeRoutine(alphaIn,alphaOut));
+        Debug.Log("Hello, world!" + alphaIn + alphaOut);
     }
 
     public IEnumerator FadeRoutine(float alphaIn,float alphaOut)
