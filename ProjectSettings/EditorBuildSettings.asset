@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Max/MainMenu.unity
+    guid: cdbd7ac2b943c4648bbdcdb38c07f4d7
+  - enabled: 1
     path: Assets/Modelos 3D/Modelado.unity
     guid: 170cb47253706d447835bf38a406db44
   - enabled: 1
