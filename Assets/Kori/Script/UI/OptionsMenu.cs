@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OptionsMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject cp_Joysticks, cp_Buttons, c_Pause, p_Pause, p_Book;
+    [SerializeField] private GameObject cp_Joysticks, cp_Buttons, c_Pause, p_Pause, p_Book, p_Help;
     private RecipeBook s_RecipeBook;
     private PlayerMovement p_stop;
 
@@ -47,5 +47,25 @@ public class OptionsMenu : MonoBehaviour
         s_RecipeBook.AbrirPagina(0);
         p_Book.SetActive(false);
         p_Pause.SetActive(true);
+    }
+
+    public void OpenHelpMenu()
+    {
+        p_stop.Detener();
+
+        cp_Buttons.SetActive(false);
+        cp_Joysticks.SetActive(false);
+        
+        c_Pause.SetActive(true);
+        p_Help.SetActive(true);
+    }
+
+    public void CloseHelpMenu()
+    {
+        c_Pause.SetActive(true);
+        p_Help.SetActive(false);
+
+        cp_Buttons.SetActive(true);
+        cp_Joysticks.SetActive(true);
     }
 }
