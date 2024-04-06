@@ -496,10 +496,10 @@ MonoBehaviour:
   - {fileID: 907837695327002972}
   ingredientRecieved: {fileID: 0}
   ready: 0
-  cf_text: {fileID: 0}
+  cf_text: {fileID: 7894058165530702832}
   cf_CorrectColor: {r: 0, g: 0.43529412, b: 0.0627451, a: 1}
   cf_IncorrectColor: {r: 0.47058824, g: 0, b: 0, a: 1}
-  iconReady: {fileID: 0}
+  iconReady: {fileID: 3140922919924343961}
 --- !u!114 &4089233446001503697
 MonoBehaviour:
   m_ObjectHideFlags: 0
