@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class OptionsMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject cp_Joysticks, cp_Buttons, c_Pause, p_Pause, p_Book, p_Help;
+    [SerializeField] private GameObject cp_Joysticks, cp_Buttons, c_Pause, p_Pause, p_Book, p_Help, p_Win;
     private RecipeBook s_RecipeBook;
     private PlayerMovement p_stop;
 
     private void Awake()
     {
         p_Pause.SetActive(false);
+        p_Win.SetActive(false);
+        p_Help.SetActive(false);
         p_Book.SetActive(false);
         c_Pause.SetActive(false);
 

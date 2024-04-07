@@ -13,11 +13,13 @@ public class InfoPanels : MonoBehaviour
 
     private void Awake()
     {
-        index = 0;
+        /*index = 0;
+        Debug.Log(GameObject.FindGameObjectsWithTag("Help"));
 
         pagesPanels = GameObject.FindGameObjectsWithTag("Help");
         pagesPanels = pagesPanels.OrderBy(x => x.name).ToArray();
 
+        */
 
         //Cerrar todo al inicio sin animación
         foreach (var page in pagesPanels)

@@ -58,7 +58,6 @@ public class RecipeBook : MonoBehaviour
     {
         for (int i = 0; i < p.transform.childCount; i++)
         {
-            Debug.Log(p.transform.GetChild(i).name);
             p.transform.GetChild(i).GetComponentInChildren<Animator>(true).Play("Abrir");
         }
     }
