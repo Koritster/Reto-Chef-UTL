@@ -22,6 +22,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void OpenOptionsMenu()
     {
+        Timer.pausado = true;
+
         p_stop.Detener();
 
         cp_Buttons.SetActive(false);
@@ -32,6 +34,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void CloseOptionsMenu()
     {
+        Timer.pausado = false;
+
         p_Pause.SetActive(false);
         c_Pause.SetActive(false);
         cp_Buttons.SetActive(true);

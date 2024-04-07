@@ -46,15 +46,15 @@ public class Bowl : MonoBehaviour
             index++;
 
             ActivateTextAnimation("Se ha agregado " + ingredientRecieved.nombreIngrediente, cf_CorrectColor);
+
+            if (ingredientRecieved.gameObject.GetComponent<Bowl>())
+            {
+                ingredientRecieved.gameObject.GetComponent<Bowl>().Vaciar();
+            }
         }
         else
         {
             ActivateTextAnimation("Ingrediente incorrecto", cf_IncorrectColor);
-        }
-
-        if (ingredientRecieved.gameObject.GetComponent<Bowl>())
-        {
-            ingredientRecieved.gameObject.GetComponent<Bowl>().Vaciar();
         }
 
         ready = index == listIngredients.Count ? true : false;
