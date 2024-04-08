@@ -11,6 +11,7 @@ TagManager:
   - Batidor
   - Page
   - PlayerMovement
+  - Help
   layers:
   - Default
   - TransparentFX
