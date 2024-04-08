@@ -57,6 +57,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void OpenHelpMenu()
     {
+        Timer.pausado = true;
+
         p_stop.Detener();
 
         cp_Buttons.SetActive(false);
@@ -68,6 +70,8 @@ public class OptionsMenu : MonoBehaviour
 
     public void CloseHelpMenu()
     {
+        Timer.pausado = false;
+
         c_Pause.SetActive(true);
         p_Help.SetActive(false);
 
