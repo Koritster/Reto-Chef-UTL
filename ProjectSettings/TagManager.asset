@@ -12,6 +12,7 @@ TagManager:
   - Page
   - PlayerMovement
   - Help
+  - GreenArrow
   layers:
   - Default
   - TransparentFX

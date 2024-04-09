@@ -17,6 +17,8 @@ public class Platillo : MonoBehaviour
 
     private int index = 0;
 
+    private GameObject greenArrow;
+
     #endregion
 
     #region Feedback - Variables
@@ -28,6 +30,12 @@ public class Platillo : MonoBehaviour
     public GameObject iconReady;
 
     #endregion
+
+    private void Start()
+    {
+        greenArrow = GameObject.FindGameObjectWithTag("GreenArrow");
+        greenArrow.SetActive(false);
+    }
 
     public bool Validar()
     {
@@ -51,6 +59,7 @@ public class Platillo : MonoBehaviour
 
         ready = index == listIngredients.Count ? true : false;
         iconReady.SetActive(ready);
+        greenArrow.SetActive(ready);
 
         return listIngredients[i] == ingredientRecieved.nombreIngrediente;
     }
