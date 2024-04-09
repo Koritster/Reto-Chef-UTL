@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43703407, g: 0.48472828, b: 0.56499153, a: 1}
+  m_IndirectSpecularColor: {r: 0.43459135, g: 0.4815833, b: 0.5625058, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -537,7 +537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &57053559
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1178,10 +1178,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1195989166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 244, y: -52}
-  m_SizeDelta: {x: 273.2038, y: 228.3131}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 244, y: -220}
+  m_SizeDelta: {x: 273.2038, y: 228.31311}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &250807386
 Animator:
@@ -1238,8 +1238,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 2
   m_Text: "\u2022 1 lechuga sangr\xEDa\n\u2022 1 manzana roja\r\n\u2022 1 manzana
-    amarilla\r\n\u2022 2 tallos de apio\n\u2022 100 gr de nueces enteras\r\n\u2022
-    10 uvas rojas grandes\r\n\u2022 10 uvas verdes sin semilla\r"
+    amarilla\r\n\u2022 100 gr de nueces enteras\r\n\u2022 10 uvas rojas grandes\r\n\u2022
+    10 uvas verdes sin semilla\r\n\u2022 2 tallos de apio"
 --- !u!222 &250807388
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1794,9 +1794,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1195989166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -193, y: -41}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -193, y: -240}
   m_SizeDelta: {x: 273.27856, y: 216.4812}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &378289615
@@ -1854,7 +1854,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 2
   m_Text: "\u2022100 gr de mayonesa\n\u2022 1 cucharada de miel\r\r\n\u2022 1 lim\xF3n\r\n\u2022
-    Sal y pimienta blanca molida"
+    Sal\n\u2022 Pimienta blanca molida"
 --- !u!222 &378289617
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2751,7 +2751,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 249.55, y: -70}
+  m_AnchoredPosition: {x: 249.55, y: -50}
   m_SizeDelta: {x: 499.0901, y: 51.2568}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &578294791
@@ -3083,6 +3083,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 575333735599978276, guid: 7dffc7ebaf69b8340a41253cb5095786, type: 3}
+      propertyPath: m_Height
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1489485300920744010, guid: 7dffc7ebaf69b8340a41253cb5095786, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3106,6 +3110,10 @@ PrefabInstance:
     - target: {fileID: 3867498627553537287, guid: 7dffc7ebaf69b8340a41253cb5095786, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4142969242677419583, guid: 7dffc7ebaf69b8340a41253cb5095786, type: 3}
+      propertyPath: m_Height
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4916252972440541914, guid: 7dffc7ebaf69b8340a41253cb5095786, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3158,6 +3166,10 @@ PrefabInstance:
     - target: {fileID: 5564496499920567942, guid: 7dffc7ebaf69b8340a41253cb5095786, type: 3}
       propertyPath: m_Text
       value: =
+      objectReference: {fileID: 0}
+    - target: {fileID: 7050593234970561271, guid: 7dffc7ebaf69b8340a41253cb5095786, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7815779502751918113, guid: 7dffc7ebaf69b8340a41253cb5095786, type: 3}
       propertyPath: circlePrefab
@@ -5729,7 +5741,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1195989166
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7386,9 +7398,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1195989166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 35}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 250, y: -120}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1480565726
@@ -8732,9 +8744,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1195989166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -186, y: 37}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -186, y: -150}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1804592092
@@ -8897,7 +8909,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -75}
+  m_AnchoredPosition: {x: 250, y: -50}
   m_SizeDelta: {x: 400, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1866017940
@@ -8996,10 +9008,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1775009895}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 192.5972, y: -15}
-  m_SizeDelta: {x: 285.1942, y: 173.3018}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 192.5972, y: -200}
+  m_SizeDelta: {x: 285.1942, y: 173.30182}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1874570945
 Animator:
@@ -9706,7 +9718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1984337057
 RectTransform:
   m_ObjectHideFlags: 0
