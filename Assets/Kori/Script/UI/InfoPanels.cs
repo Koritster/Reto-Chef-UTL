@@ -52,7 +52,7 @@ public class InfoPanels : MonoBehaviour
     {
         for (int i = 0; i < p.transform.childCount; i++)
         {
-            p.transform.GetChild(i).GetComponentInChildren<Animator>(true).Play("Cerrar");
+            //p.transform.GetChild(i).GetComponentInChildren<Animator>(true).Play("Cerrar");
         }
     }
 
@@ -60,7 +60,7 @@ public class InfoPanels : MonoBehaviour
     {
         for (int i = 0; i < p.transform.childCount; i++)
         {
-            p.transform.GetChild(i).GetComponentInChildren<Animator>(true).Play("Abrir");
+            //p.transform.GetChild(i).GetComponentInChildren<Animator>(true).Play("Abrir");
         }
     }
 
@@ -114,7 +114,7 @@ public class InfoPanels : MonoBehaviour
 
     IEnumerator anim_CerrarPaginas(GameObject p)
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.1f);
         p.SetActive(false);
     }
 }

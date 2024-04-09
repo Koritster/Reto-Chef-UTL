@@ -18,11 +18,12 @@ public class CompleteLevel : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Timer.pausado = true;
 
         Platillo p = other.GetComponent<Platillo>();
         if(p != null && p.ready)
         {
+            Timer.pausado = true;
+            
             Debug.Log("Ola");
             cp_Buttons.SetActive(false);
             cp_Joysticks.SetActive(false);
