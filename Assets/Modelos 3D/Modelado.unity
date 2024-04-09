@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43459135, g: 0.4815833, b: 0.5625058, a: 1}
+  m_IndirectSpecularColor: {r: 0.43703407, g: 0.48472828, b: 0.56499153, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -537,7 +537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &57053559
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1180,8 +1180,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 223.3992, y: -20.760418}
-  m_SizeDelta: {x: 273.2786, y: 216.4812}
+  m_AnchoredPosition: {x: 244, y: -52}
+  m_SizeDelta: {x: 273.2038, y: 228.3131}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &250807386
 Animator:
@@ -1237,9 +1237,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: "\u2022 1 manzana roja\r\n\u2022 1 manzana amarilla\r\n\u2022 2 tallos
-    de apio\n\u2022 100 gr de nueces enteras\r\n\u2022 10 uvas rojas grandes\r\n\u2022
-    10 uvas verdes sin semilla\r\n\u2022 1 lechuga sangr\xEDa"
+  m_Text: "\u2022 1 lechuga sangr\xEDa\n\u2022 1 manzana roja\r\n\u2022 1 manzana
+    amarilla\r\n\u2022 2 tallos de apio\n\u2022 100 gr de nueces enteras\r\n\u2022
+    10 uvas rojas grandes\r\n\u2022 10 uvas verdes sin semilla\r"
 --- !u!222 &250807388
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1497,8 +1497,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 252, y: -75}
-  m_SizeDelta: {x: 400, y: 60}
+  m_AnchoredPosition: {x: 183.5424, y: -63}
+  m_SizeDelta: {x: 263.0848, y: 51.407}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &328694251
 Animator:
@@ -1543,7 +1543,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 04ab5542bbb7ef349993824735c379fe, type: 3}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1554,7 +1554,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'PROCEDIMIENTOS:'
+  m_Text: 'Procedimineto real ensalada waldorf:'
 --- !u!222 &328694253
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1796,7 +1796,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -193, y: -23}
+  m_AnchoredPosition: {x: -193, y: -41}
   m_SizeDelta: {x: 273.27856, y: 216.4812}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &378289615
@@ -3808,8 +3808,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 230.3932, y: -31.013807}
-  m_SizeDelta: {x: 288.7734, y: 236.3848}
+  m_AnchoredPosition: {x: 226.47263, y: -51.372467}
+  m_SizeDelta: {x: 296.6145, y: 235.1297}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &788069597
 Animator:
@@ -7388,7 +7388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 250, y: 65}
+  m_AnchoredPosition: {x: 250, y: 35}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1480565726
@@ -7838,7 +7838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 175.8489, y: 100.737595}
+  m_AnchoredPosition: {x: 175.8489, y: 76}
   m_SizeDelta: {x: 251.6978, y: 24.5248}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1629148542
@@ -8734,7 +8734,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -186, y: 65}
+  m_AnchoredPosition: {x: -186, y: 37}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1804592092
@@ -8954,7 +8954,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Receta: '
+  m_Text: 'Receta Juego: '
 --- !u!222 &1866017942
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9706,7 +9706,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1984337057
 RectTransform:
   m_ObjectHideFlags: 0
