@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43459135, g: 0.4815833, b: 0.5625058, a: 1}
+  m_IndirectSpecularColor: {r: 0.43703407, g: 0.48472828, b: 0.56499153, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -744,7 +744,8 @@ MonoBehaviour:
     2D - UI\n\tFernando Guerrero Perez - L\xEDder del \xE1rea\n\tAlejandro Morales
     Gomez - Asistente\n\nProgramaci\xF3n\n\tAngel Yael Vargas Sanchez - L\xEDder
     del \xE1rea\n\tAlejandro Maximiliano Ceballos Quintana - Asistente\n\nMusica\n\tJazz
-    Background Music Royalty - MUSIC4VIDEO"
+    Background Music Royalty - MUSIC4VIDEO\n\tRoyalty free Cooking Background Music
+    - MUSIC4VIDEO"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -771,7 +772,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47.4
+  m_fontSize: 45.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2201,7 +2202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &556276232
 RectTransform:
   m_ObjectHideFlags: 0
