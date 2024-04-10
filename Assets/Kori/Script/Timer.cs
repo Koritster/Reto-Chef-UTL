@@ -9,6 +9,11 @@ public class Timer : MonoBehaviour
     public static bool pausado;
     [SerializeField] private Text txt_Timer;
 
+    private void Start()
+    {
+        tiempoTranscurrido = 0f;
+    }
+
     // Update is called once per frame
     void Update()
     {
