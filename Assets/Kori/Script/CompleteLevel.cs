@@ -33,7 +33,10 @@ public class CompleteLevel : MonoBehaviour
             Timer.Win();
 
             txt_Title.text = other.gameObject.name;
-            txt_Time.text = Mathf.Floor(Timer.tiempoEnCompletar) + " s";
+
+            float f = Mathf.Round(Timer.tiempoEnCompletar * 100) * 0.01f;
+
+            txt_Time.text = f + " s";
             txt_Description.text = description;
             img_Platillo.sprite = platillo;
         }
