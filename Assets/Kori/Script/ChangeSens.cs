@@ -13,7 +13,7 @@ public class ChangeSens : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float s = PlayerPrefs.GetFloat("sens", 20);
+        float s = PlayerPrefs.GetFloat("sens", 10);
         sl_sens.value = s;
         txt_sens.text = "" + s;
     }

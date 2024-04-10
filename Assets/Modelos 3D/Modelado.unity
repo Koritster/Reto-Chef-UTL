@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43459135, g: 0.4815833, b: 0.5625058, a: 1}
+  m_IndirectSpecularColor: {r: 0.43703374, g: 0.4847278, b: 0.56499094, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3318,7 +3318,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.13685861, y: 0.1175199, z: 0.0013948213}
   m_Center: {x: 0, y: 0.0000000027939677, z: 4.656613e-10}
@@ -5810,6 +5810,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 64d6afe3fc4d1c343904e3a414aca28b, type: 2}
+    - target: {fileID: 8019499221449652171, guid: dcaf2d3999d550c4a8092590c0bdeea5, type: 3}
+      propertyPath: m_Name
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 8964200726855577957, guid: dcaf2d3999d550c4a8092590c0bdeea5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -7298,7 +7302,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.13864249, y: 0.002236247, z: 0.02985}
+  m_Size: {x: 0.13864249, y: 0.0033543706, z: 0.02985}
   m_Center: {x: 0.028570917, y: 0.00061812426, z: 0.0000000011920929}
 --- !u!1 &1522291335
 GameObject:
@@ -7985,7 +7989,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.005, y: 0.005, z: 0.03}
+  m_Size: {x: 0.0075, y: 0.0075, z: 0.03}
   m_Center: {x: 0.0000000018626451, y: 0.0000000037252903, z: 0}
 --- !u!1001 &1652387865
 PrefabInstance:
