@@ -36,10 +36,9 @@ public class Bowl : MonoBehaviour
 
     private void Awake()
     {
+        ingredientBowl = GetComponent<Ingrediente>();
         ChangeProgressBar();
         ChangeNextIngredient(ready, index);
-
-        ingredientBowl = GetComponent<Ingrediente>();
     }
 
     #region Bowl - Funciones
@@ -107,18 +106,22 @@ public class Bowl : MonoBehaviour
 
     private void ChangeProgressBar()
     {
-        img_ProgressBar.fillAmount = index / ingredientsModels.Count;
+        Debug.Log((float)index / ingredientsModels.Count);
+        img_ProgressBar.fillAmount = (float)index / ingredientsModels.Count;
     }
 
     private void ChangeNextIngredient(bool r, int i)
     {
+        if(ingredientBowl.nombreIngrediente == finalBowlIngredientName)
+        {
+            txt_NextIngredient.text = "";
+        }
         if (r)
         {
             txt_NextIngredient.text = "Batir";
         }
         else
         {
-            i++;
             txt_NextIngredient.text = listIngredients[i];
         }
     }

@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 34413838}
   - component: {fileID: 34413840}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ImagenPlatillo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2847,7 +2847,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 536098097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7502ca76c530cd043a22514f6c9406b4, type: 3}
+  m_Script: {fileID: 11500000, guid: ac9e29af44b4f5044a4a3c183841c62f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cp_Joysticks: {fileID: 1862233074}
@@ -2855,12 +2855,12 @@ MonoBehaviour:
   c_PauseMenu: {fileID: 221326277}
   c_WinScreen: {fileID: 57053558}
   txt_Title: {fileID: 1314271440}
-  txt_Time: {fileID: 379838206}
-  txt_Description: {fileID: 1238070583}
+  txt_Time: {fileID: 0}
+  txt_Description: {fileID: 379838206}
   img_Platillo: {fileID: 34413838}
-  description: "La ensalada Waldorf es una ensalada cl\xE1sica que consiste en una
-    mezcla de apio picado, manzanas, nueces y mayonesa. Fue creada originalmente
-    en el Hotel Waldorf-Astoria en Nueva York a finales del siglo XIX."
+  description: La ensalada Waldorf es una ensalada clasica que consiste en una mezcla
+    de apio cortado, manzanas, nueces y mayonesa. Fue creada originalmente en el
+    Hotel Waldorf Astoria en Nueva York a finales del siglo XIX.
   platillo: {fileID: 21300000, guid: f672a83a76f163b4ea76f0a8ff15e201, type: 3}
 --- !u!65 &536098100
 BoxCollider:
@@ -11179,6 +11179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bowlEnsalada
       objectReference: {fileID: 0}
+    - target: {fileID: 3432866920470789062, guid: ee47d471f8cbcaf4ba51606ee86a425b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f85e6fdeac351b64bb7561521e30ed39, type: 3}
     - target: {fileID: 5901846673357984298, guid: ee47d471f8cbcaf4ba51606ee86a425b, type: 3}
       propertyPath: bug
       value: 0
@@ -11432,6 +11436,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5474381920789359568, guid: fd05a9162ff5eef4eb9f26085b11ca36, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f85e6fdeac351b64bb7561521e30ed39, type: 3}
     - target: {fileID: 7137399160903030018, guid: fd05a9162ff5eef4eb9f26085b11ca36, type: 3}
       propertyPath: m_Name
       value: bowlAderezoEnsaladaWaldorf
