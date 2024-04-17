@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Detener()
     {
+        Debug.Log(charController);
         charController.Move(Vector3.zero);
     }
 }

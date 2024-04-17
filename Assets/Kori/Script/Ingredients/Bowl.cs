@@ -27,10 +27,18 @@ public class Bowl : MonoBehaviour
     [SerializeField] private Color cf_CorrectColor, cf_IncorrectColor;
     public GameObject iconReady;
 
+    [Header("Progreso")]
+    [SerializeField] private Image img_ProgressBar;
+    [SerializeField] private Text txt_NextIngredient;
+
+
     #endregion
 
     private void Awake()
     {
+        ChangeProgressBar();
+        ChangeNextIngredient(ready, index);
+
         ingredientBowl = GetComponent<Ingrediente>();
     }
 
@@ -47,6 +55,8 @@ public class Bowl : MonoBehaviour
 
             ActivateTextAnimation("Se ha agregado " + ingredientRecieved.nombreIngrediente, cf_CorrectColor);
 
+            ChangeProgressBar();
+
             if (ingredientRecieved.gameObject.GetComponent<Bowl>())
             {
                 ingredientRecieved.gameObject.GetComponent<Bowl>().Vaciar();
@@ -58,6 +68,8 @@ public class Bowl : MonoBehaviour
         }
 
         ready = index == listIngredients.Count ? true : false;
+
+        ChangeNextIngredient(ready, index);
 
         return listIngredients[i] == ingredientRecieved.nombreIngrediente;
     }
@@ -91,6 +103,24 @@ public class Bowl : MonoBehaviour
         cf_text.GetComponent<Text>().color = color;
         cf_text.GetComponent<Animator>().Play("Feedback");
         StartCoroutine(waitForFeedbackAnimation());
+    }
+
+    private void ChangeProgressBar()
+    {
+        img_ProgressBar.fillAmount = index / ingredientsModels.Count;
+    }
+
+    private void ChangeNextIngredient(bool r, int i)
+    {
+        if (r)
+        {
+            txt_NextIngredient.text = "Batir";
+        }
+        else
+        {
+            i++;
+            txt_NextIngredient.text = listIngredients[i];
+        }
     }
 
     IEnumerator waitForFeedbackAnimation()
