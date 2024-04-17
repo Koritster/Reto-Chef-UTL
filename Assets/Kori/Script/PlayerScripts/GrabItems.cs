@@ -109,13 +109,13 @@ public class GrabItems : MonoBehaviour
         itemGrabbed.transform.position = holdPosition.position;
         itemGrabbed.GetComponent<Rigidbody>().useGravity = false;
         itemGrabbed.GetComponent<ItemToGrab>().CorrectRotation();
-        itemGrabbed.GetComponent<BoxCollider>().isTrigger = true;
+        itemGrabbed.GetComponent<BoxCollider>().enabled = false;
     }
 
     public void Soltar()
     {
         itemGrabbed.transform.position = hitPosition + new Vector3(0f, itemGrabbed.GetComponent<Renderer>().bounds.size.y/2, 0f);
-        itemGrabbed.GetComponent<BoxCollider>().isTrigger = false;
+        itemGrabbed.GetComponent<BoxCollider>().enabled = true;
         itemGrabbed.GetComponent<ItemToGrab>().CorrectRotation();
         itemGrabbed.GetComponent<Rigidbody>().useGravity = true;
         itemGrabbed = null;

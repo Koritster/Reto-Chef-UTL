@@ -17,6 +17,8 @@ public class Platillo : MonoBehaviour
 
     private int index = 0;
 
+    private GameObject greenArrow;
+
     #endregion
 
     #region Feedback - Variables
@@ -29,6 +31,12 @@ public class Platillo : MonoBehaviour
 
     #endregion
 
+    private void Start()
+    {
+        greenArrow = GameObject.FindGameObjectWithTag("GreenArrow");
+        greenArrow.SetActive(false);
+    }
+
     public bool Validar()
     {
         int i = index;
@@ -38,19 +46,20 @@ public class Platillo : MonoBehaviour
             index++;
 
             ActivateTextAnimation("Se ha agregado " + ingredientRecieved.nombreIngrediente, cf_CorrectColor);
+
+            if (ingredientRecieved.gameObject.GetComponent<Bowl>())
+            {
+                ingredientRecieved.gameObject.GetComponent<Bowl>().Vaciar();
+            }
         }
         else
         {
             ActivateTextAnimation("Ingrediente incorrecto", cf_IncorrectColor);
         }
 
-        if (ingredientRecieved.gameObject.GetComponent<Bowl>())
-        {
-            ingredientRecieved.gameObject.GetComponent<Bowl>().Vaciar();
-        }
-
         ready = index == listIngredients.Count ? true : false;
         iconReady.SetActive(ready);
+        greenArrow.SetActive(ready);
 
         return listIngredients[i] == ingredientRecieved.nombreIngrediente;
     }

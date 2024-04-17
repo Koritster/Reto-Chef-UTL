@@ -14,7 +14,7 @@ public class CameraLook : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sens = PlayerPrefs.GetFloat("sens", 20);
+        sens = PlayerPrefs.GetFloat("sens", 10);
     }
 
     // Update is called once per frame

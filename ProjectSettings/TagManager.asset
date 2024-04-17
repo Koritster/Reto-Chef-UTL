@@ -11,6 +11,8 @@ TagManager:
   - Batidor
   - Page
   - PlayerMovement
+  - Help
+  - GreenArrow
   layers:
   - Default
   - TransparentFX
